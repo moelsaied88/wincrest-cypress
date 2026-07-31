@@ -6,7 +6,7 @@
     "headline": "A neighborhood built for small explorers",
     "standfirst": "Lakewood Forest is 2,617 homes under a canopy of oaks in northwest Harris County. This is a guide to what surrounds it — written for a family with children between three and ten, and honest about the drive times.",
     "address": "12903 Wincrest Ct, Cypress, Texas 77429",
-    "mapIntro": "Every place on this page, pinned and color-coded by section. The dark pin is the house.",
+    "mapIntro": "Every place on this page, pinned and color-coded by section. The dark pin is the house. It opens on everything within a normal weekday drive — use the button to pull back and see the weekend trips down toward Galveston Bay.",
     "footerNote": "Distances and drive times are measured from the house and assume normal traffic. Prices, hours, and splash pad seasons change — the links go to each place's own site, which is always more current than this page.",
     "updated": "July 2026",
     "home": {
@@ -15,10 +15,10 @@
       "note": "Lakewood Forest, Section 10"
     },
     "heroImage": {
-      "file": "opening-faulkey-trail.jpg",
-      "alt": "The paved Faulkey Gully hike and bike trail running between trees near Lakewood Forest.",
-      "credit": "Exploricity",
-      "sourceUrl": "https://exploricity.blob.core.windows.net/photos/129s-1e51d94600.jpg"
+      "file": "opening-lakewood-forest.jpg",
+      "alt": "The stone and stucco Lakewood Forest entrance monument, surrounded by shrubs and mature trees.",
+      "credit": "Lakewood Forest Civic Association",
+      "sourceUrl": "https://img1.wsimg.com/isteam/ip/e070ecb8-242a-465b-a2cd-5420f8af0a64/Grant%20and%20Gardenglen%202.jpg"
     }
   },
 
@@ -28,7 +28,7 @@
       "label": "Inside Lakewood Forest",
       "navLabel": "Neighborhood",
       "title": "The neighborhood itself",
-      "intro": "The oaks, the trail and the club — everything within about two miles of the front door.",
+      "intro": "Lakewood Forest is 2,617 homes on large lots under mature oaks, with landscaped medians, streets quiet enough to learn to ride a bike on, and one of the lowest HOA fees in northwest Houston. Everything below sits within about two miles of the front door.",
       "color": "#5f7050"
     },
     {
@@ -123,23 +123,6 @@
         "alt": "A paved trail running alongside the Faulkey Gully channel.",
         "credit": "Exploricity",
         "sourceUrl": "https://exploricity.blob.core.windows.net/photos/123s-1e51d9401c.jpg"
-      }
-    },
-    {
-      "id": "lakewood-forest",
-      "name": "Lakewood Forest itself",
-      "act": "neighborhood",
-      "blurb": "2,617 homes under big oaks, with wide lots and streets quiet enough to learn to ride on.",
-      "coords": [29.995, -95.605],
-      "driveMinutes": 0,
-      "season": "Year-round",
-      "cost": "One of the lowest HOA fees in northwest Houston",
-      "url": "https://lakewoodforestfund.com/",
-      "image": {
-        "file": "lakewood-forest.jpg",
-        "alt": "A tree-lined residential street in Lakewood Forest.",
-        "credit": "Lakewood Forest Civic Association",
-        "sourceUrl": "https://img1.wsimg.com/isteam/ip/e070ecb8-242a-465b-a2cd-5420f8af0a64/Grant%20and%20Gardenglen%202.jpg"
       }
     },
     {
@@ -243,6 +226,200 @@
         "alt": "Woodland path at Kleb Woods Nature Preserve.",
         "credit": "Harris County Precinct 4",
         "sourceUrl": "https://cp4.harriscountytx.gov/Portals/cp4/Images/Kleb_Woods_2021_%20(37).jpg"
+      }
+    },
+
+    {
+      "id": "zube-park-splash-pad",
+      "name": "Zube Park Splash Pad",
+      "act": "water",
+      "hero": true,
+      "blurb": "Free splash pad, playground and a miniature railroad on 225 acres of county park.",
+      "body": "The splash pad sits on the Becker Road side of Zube Park and runs May through September, free and unstaffed, with a playground right beside it for when someone needs a dry break. The rest of the 225-acre Precinct 4 park gives you nearly three miles of paved trail, picnic areas, fishing and a disc golf course. The part your kid will actually talk about afterward is the Houston Area Live Steamers' miniature railroad, whose working steam and diesel model trains run on scheduled public days.",
+      "address": "17560 Roberts Rd, Hockley, TX 77447",
+      "coords": [30.030573, -95.799415],
+      "distanceMiles": 13.8,
+      "driveMinutes": 25,
+      "season": "Splash pad open May 1 – Sept 30",
+      "cost": "Free",
+      "url": "https://cp4.harriscountytx.gov/Explore/Parks/Precinct-4-Parks/zube-park",
+      "image": {
+        "file": "zube-park.jpg",
+        "alt": "Children playing on the splash pad at Zube Park.",
+        "credit": "Harris County Precinct 4",
+        "sourceUrl": "https://cp4.harriscountytx.gov/Portals/cp4/Images/Zube_Park_splash_pad_2022_%20(59).jpg"
+      }
+    },
+    {
+      "id": "clark-henry-park-splash-pad",
+      "name": "Clark Henry Park Splash Pad",
+      "act": "water",
+      "blurb": "Free city splash pad under mature live oaks — but call ahead, it is being rebuilt.",
+      "address": "7804 Equador St, Jersey Village, TX 77040",
+      "coords": [29.884471, -95.551278],
+      "distanceMiles": 10.6,
+      "driveMinutes": 22,
+      "season": "April–September · park under renovation through 2026, confirm before going",
+      "cost": "Free",
+      "url": "https://www.jerseyvillage.gov/378/Aquatics-Splash-Pad"
+    },
+    {
+      "id": "bane-park-splash-pad",
+      "name": "Bane Park Splash Pad",
+      "act": "water",
+      "blurb": "Push-button splash pad beside a rock climbing wall and a stocked fishing lake.",
+      "address": "9600 W Little York Rd, Houston, TX 77040",
+      "coords": [29.87213, -95.541563],
+      "distanceMiles": 12,
+      "driveMinutes": 23,
+      "season": "Warm months · Precinct 1 does not publish exact dates, so call first",
+      "cost": "Free",
+      "url": "https://www.hcp1.net/BanePark",
+      "image": {
+        "file": "bane-park.jpg",
+        "alt": "The playground and splash pad area at Bane Park.",
+        "credit": "Harris County Precinct 1",
+        "sourceUrl": "https://www.hcp1.net/Portals/hcp1/Images/Bane%20Park%201.jpg"
+      }
+    },
+    {
+      "id": "may-valley-sprayground",
+      "name": "May Valley Sprayground",
+      "act": "water",
+      "blurb": "Overhead dump bucket and sprayers kids can aim. The longest season of any of these.",
+      "address": "11598 May Valley Cir, The Woodlands, TX 77354",
+      "coords": [30.176672, -95.590251],
+      "distanceMiles": 15,
+      "driveMinutes": 27,
+      "season": "March 1 – Oct 31, 8am–8pm daily",
+      "cost": "Free · no pool pass needed",
+      "url": "https://www.visitthewoodlands.com/listing/may-valley-splash-pad/1474/",
+      "image": {
+        "file": "may-valley-sprayground.jpg",
+        "alt": "Children playing at the May Valley sprayground in The Woodlands.",
+        "credit": "Visit The Woodlands",
+        "sourceUrl": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/crm/woodlands/Day_071125_splash-pads-may-valley-8_91476F8B-EC22-6225-C75E64A466DE65F1-9147676c0ddbfee_914793db-c27b-acdf-6a28beb1dafe6a20.jpg"
+      }
+    },
+    {
+      "id": "nottingham-park-splash-pad",
+      "name": "Nottingham Park Splash Pad",
+      "act": "water",
+      "blurb": "The most elaborate of the lot: dump buckets, pipe tunnels, and shade for parents.",
+      "address": "14205 Kimberley Ln, Houston, TX 77079",
+      "coords": [29.776208, -95.594285],
+      "distanceMiles": 19.4,
+      "driveMinutes": 33,
+      "season": "Splash pad open May 1 – Sept 30",
+      "cost": "Free",
+      "url": "https://cp4.harriscountytx.gov/Explore/Parks/Precinct-4-Parks/nottingham-park",
+      "image": {
+        "file": "nottingham-park.jpg",
+        "alt": "The splash pad and play area at Nottingham Park.",
+        "credit": "Harris County Precinct 4",
+        "sourceUrl": "https://cp4.harriscountytx.gov/Portals/cp4/Images/Nottingham_1.jpg"
+      }
+    },
+
+    {
+      "id": "fun-n-play-indoor-playground",
+      "name": "Fun N Play Indoor Playground",
+      "act": "indoor",
+      "hero": true,
+      "blurb": "Three-story slide and a ball pit with a canoe in it. Walk in between 10 and 5.",
+      "body": "The centerpiece is a three-story slide, backed up by a side-by-side triple slide and an ocean-themed ball pit with a banana canoe to flop into. Crawlers and brand-new walkers get their own padded Kiddie Corner, so a three-year-old and a baby sibling can both be occupied at the same time. Open play needs no reservation between 10 and 5, two adults come in free with each paid child, and everyone — grown-ups included — has to wear socks.",
+      "address": "11712 Grant Rd, Ste A, Cypress, TX 77429",
+      "coords": [29.973796, -95.598817],
+      "distanceMiles": 2.7,
+      "driveMinutes": 7,
+      "season": "Year-round",
+      "cost": "$11.99/child weekdays, $12.99 weekends",
+      "ageRange": "infant–8",
+      "url": "https://www.funnplayday.com/",
+      "image": {
+        "file": "fun-n-play.jpg",
+        "alt": "The three-story slide at Fun N Play Indoor Playground.",
+        "credit": "Fun N Play",
+        "sourceUrl": "https://static.wixstatic.com/media/121d7e_f8316ff1926b4edeafa96bc435c5632c~mv2.jpg/v1/fill/w_920,h_1040,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/slide.jpg"
+      }
+    },
+    {
+      "id": "play-street-museum-cypress",
+      "name": "Play Street Museum",
+      "act": "indoor",
+      "blurb": "Farm-themed play museum with a red barn, a milkable cow and a slime lab.",
+      "address": "25712 Northwest Fwy, Suite E, Cypress, TX 77429",
+      "coords": [29.970039, -95.689316],
+      "distanceMiles": 5.5,
+      "driveMinutes": 12,
+      "season": "Weekdays, by 90-minute reserved session",
+      "cost": "$14/child",
+      "ageRange": "1–8",
+      "url": "https://cypress.playstreetmuseum.com/",
+      "image": {
+        "file": "play-street-museum.jpg",
+        "alt": "The farm-themed play space at Play Street Museum Cypress.",
+        "credit": "Play Street Museum Cypress",
+        "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e1534168070da2b80d666cd/b0c290a6-90d4-4a8c-8d9e-099d04a48d2f/IMG_2669-resize.jpg"
+      }
+    },
+    {
+      "id": "romp-n-roll-cypress",
+      "name": "Romp n' Roll",
+      "act": "indoor",
+      "blurb": "Instructor-led gym, music and art classes — but only up to age five.",
+      "address": "24310 Hwy 290, Suite 200, Cypress, TX 77429",
+      "coords": [29.9587, -95.676],
+      "distanceMiles": 5.7,
+      "driveMinutes": 12,
+      "season": "Year-round · classes, not drop-in play",
+      "ageRange": "3 months–5 years",
+      "url": "https://rompnroll.com/cypress-tx/",
+      "image": {
+        "file": "romp-n-roll.jpg",
+        "alt": "A toddler class in session at Romp n' Roll.",
+        "credit": "Romp n' Roll Cypress",
+        "sourceUrl": "https://rompnroll.com/wp-content/uploads/2026/02/ChristianRumleyPhotography_RompnRoll_ToddlerClass_2025-150.jpg"
+      }
+    },
+    {
+      "id": "kidtastic-park-cypress",
+      "name": "Kidtastic Park",
+      "act": "indoor",
+      "blurb": "Twisty tunnels and big slides, with a separate area so toddlers don't get flattened.",
+      "address": "25410 Highway 290, Suite B-8, Cypress, TX 77429",
+      "coords": [29.9655, -95.6881],
+      "distanceMiles": 5.8,
+      "driveMinutes": 13,
+      "season": "Year-round · no re-entry, so plan one long visit",
+      "cost": "$15.99/child, $8.99 under 2, grip socks $2.75",
+      "ageRange": "0–10",
+      "url": "https://kidtasticpark.com/",
+      "image": {
+        "file": "kidtastic-park.jpg",
+        "alt": "The slides at Kidtastic Park indoor playground.",
+        "credit": "Kidtastic Park",
+        "sourceUrl": "https://kidtasticpark.com/wp-content/uploads/2023/11/Slides.jpg"
+      }
+    },
+    {
+      "id": "little-explorers-lab",
+      "name": "Little Explorers Lab",
+      "act": "indoor",
+      "blurb": "Calm Montessori-style play lab rather than a soft-play warehouse. Adults free.",
+      "address": "11242 FM 1960 West Rd, Suite 105, Houston, TX 77065",
+      "coords": [29.935139, -95.581282],
+      "distanceMiles": 6.1,
+      "driveMinutes": 13,
+      "season": "Tuesday–Saturday",
+      "cost": "$15/child · adults free",
+      "ageRange": "18 months–8",
+      "url": "https://www.littleexplorerslab.com/",
+      "image": {
+        "file": "little-explorers-lab.jpg",
+        "alt": "Children using hands-on materials at Little Explorers Lab.",
+        "credit": "Little Explorers Lab",
+        "sourceUrl": "https://images.squarespace-cdn.com/content/v1/65c7916ced8ae44c17047525/72323f7e-4252-414d-9458-a2b512ab57e5/022+-+LEL-Session1-LR.jpg"
       }
     },
 

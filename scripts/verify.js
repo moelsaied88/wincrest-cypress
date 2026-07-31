@@ -14,22 +14,30 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'docs');
 const HTML = path.join(OUT, 'index.html');
 
-const UA =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+/* No single user agent satisfies every host: Wikimedia 429s generic browser
+   strings and wants a descriptive one, while several venue sites sit behind bot
+   protection that 403s anything that is not a browser. Try both before calling
+   a link broken. */
+const AGENTS = [
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'wincrest-cypress-site/1.0 (https://github.com/moelsaied88/wincrest-cypress; link check)',
+];
 
-function head(url, redirects) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function head(url, ua, redirects) {
   redirects = redirects || 0;
   return new Promise((resolve) => {
     if (redirects > 5) return resolve({ ok: false, status: 'redirect loop' });
     const lib = url.startsWith('http://') ? http : https;
     const req = lib.request(
       url,
-      { method: 'GET', headers: { 'User-Agent': UA }, timeout: 15000 },
+      { method: 'GET', headers: { 'User-Agent': ua }, timeout: 15000 },
       (res) => {
         res.resume();
         if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
           const next = new URL(res.headers.location, url).toString();
-          return resolve(head(next, redirects + 1));
+          return resolve(head(next, ua, redirects + 1));
         }
         resolve({ ok: res.statusCode === 200, status: res.statusCode });
       }
@@ -53,7 +61,11 @@ async function main() {
 
   console.log('\n  local assets');
   const localRefs = new Set();
-  for (const m of html.matchAll(/(?:src|href)="(assets\/[^"]+)"/g)) localRefs.add(m[1]);
+  /* Strip the cache-busting ?v= suffix the build adds — the file on disk has no
+     query string. */
+  for (const m of html.matchAll(/(?:src|href)="(assets\/[^"]+?)(?:\?v=[0-9a-f]+)?"/g)) {
+    localRefs.add(m[1]);
+  }
   for (const ref of [...localRefs].sort()) {
     const exists = fs.existsSync(path.join(OUT, ref));
     if (!exists) {
@@ -76,7 +88,21 @@ async function main() {
 
   console.log('\n  outbound links');
   const urls = [...new Set([...html.matchAll(/href="(https?:\/\/[^"]+)"/g)].map((m) => m[1]))];
-  const results = await Promise.all(urls.map((u) => head(u).then((r) => ({ url: u, ...r }))));
+
+  /* Checked serially with a pause: Wikimedia returns 429 to bursts, which would
+     otherwise look like a page full of broken links. */
+  const results = [];
+  for (const url of urls) {
+    let r;
+    for (const ua of AGENTS) {
+      r = await head(url, ua);
+      if (r.ok) break;
+      await sleep(1500);
+    }
+    results.push({ url, ...r });
+    await sleep(300);
+  }
+
   for (const r of results.sort((a, b) => a.url.localeCompare(b.url))) {
     if (!r.ok) {
       console.log(`    ${String(r.status).padEnd(8)} ${r.url}`);

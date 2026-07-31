@@ -3,6 +3,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, 'src');
@@ -205,6 +206,27 @@ function mapPayload(data) {
   };
 }
 
+/* Appends a content hash to stylesheet and script URLs. Without this a browser
+   holding an old site.css will keep applying it after a deploy, which is both a
+   real problem for anyone re-opening a link you already sent and a maddening
+   one to debug locally. */
+function fingerprintAssets(html) {
+  return html.replace(/(assets\/[^"?]+\.(?:css|js))"/g, (match, rel) => {
+    const file = path.join(OUT, rel);
+    if (!fs.existsSync(file)) return match;
+
+    let bytes = fs.readFileSync(file);
+    /* site.css only @imports fonts.css, so a font change would not otherwise
+       alter its hash. */
+    if (rel.endsWith('styles/site.css')) {
+      const fonts = path.join(OUT, 'assets', 'styles', 'fonts.css');
+      if (fs.existsSync(fonts)) bytes = Buffer.concat([bytes, fs.readFileSync(fonts)]);
+    }
+    const hash = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
+    return `${rel}?v=${hash}"`;
+  });
+}
+
 function copyDir(from, to) {
   fs.mkdirSync(to, { recursive: true });
   for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
@@ -257,13 +279,28 @@ function main() {
 
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(ASSETS, { recursive: true });
-  fs.writeFileSync(path.join(OUT, 'index.html'), html);
   fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
-  for (const dir of ['styles', 'scripts', 'vendor', 'images', 'fonts']) {
+  for (const dir of ['styles', 'scripts', 'vendor', 'fonts']) {
     const from = path.join(SRC, dir);
     if (fs.existsSync(from)) copyDir(from, path.join(ASSETS, dir));
   }
+
+  /* Only the section heroes and the opening image use the large size, so
+     copying the whole images directory would ship ~16 unused hero files. */
+  const wanted = new Set([...html.matchAll(/assets\/(images\/[^"]+)/g)].map((m) => m[1]));
+  const imagesFrom = path.join(SRC, 'images');
+  if (fs.existsSync(imagesFrom)) {
+    fs.mkdirSync(path.join(ASSETS, 'images'), { recursive: true });
+    for (const rel of wanted) {
+      const from = path.join(SRC, path.basename(path.dirname(rel)), path.basename(rel));
+      if (fs.existsSync(from)) fs.copyFileSync(from, path.join(ASSETS, path.basename(path.dirname(rel)), path.basename(rel)));
+      else console.warn(`  warning: ${rel} referenced but not built — run npm run images`);
+    }
+  }
+
+  /* Written last: fingerprinting reads the copied files to hash them. */
+  fs.writeFileSync(path.join(OUT, 'index.html'), fingerprintAssets(html));
 
   const withImages = data.places.filter((p) => p.image && p.image.file).length;
   console.log(`  built docs/index.html`);
