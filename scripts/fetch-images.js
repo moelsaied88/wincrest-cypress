@@ -14,8 +14,14 @@ const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'src', 'data', 'places.json');
 const OUT = path.join(ROOT, 'src', 'originals');
 
+/* Wikimedia rejects generic and spoofed agents with a 429. A descriptive agent
+   plus deliberate pacing keeps us inside their etiquette policy. */
 const UA =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+  'wincrest-cypress-site/1.0 (https://github.com/moelsaied88/wincrest-cypress; static area guide)';
+
+const THROTTLE_MS = 1200;
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function get(url, redirects) {
   redirects = redirects || 0;
@@ -70,6 +76,7 @@ async function main() {
       continue;
     }
     try {
+      await sleep(THROTTLE_MS);
       const { body, type } = await get(image.sourceUrl);
       if (!/^image\//.test(type)) throw new Error(`not an image (${type || 'no content-type'})`);
       if (body.length < 5000) throw new Error(`suspiciously small (${body.length} bytes)`);

@@ -6,24 +6,29 @@
     "headline": "A neighborhood built for small explorers",
     "standfirst": "Lakewood Forest is 2,617 homes under a canopy of oaks in northwest Harris County. This is a guide to what surrounds it — written for a family with children between three and ten, and honest about the drive times.",
     "address": "12903 Wincrest Ct, Cypress, Texas 77429",
-    "mapIntro": "Every place on this page, pinned and colour-coded by section. The dark pin is the house.",
+    "mapIntro": "Every place on this page, pinned and color-coded by section. The dark pin is the house.",
     "footerNote": "Distances and drive times are measured from the house and assume normal traffic. Prices, hours, and splash pad seasons change — the links go to each place's own site, which is always more current than this page.",
     "updated": "July 2026",
     "home": {
-      "coords": [29.9983, -95.6297],
+      "coords": [29.99931, -95.61673],
       "label": "12903 Wincrest Ct",
       "note": "Lakewood Forest, Section 10"
     },
-    "heroImage": null
+    "heroImage": {
+      "file": "opening-faulkey-trail.jpg",
+      "alt": "The paved Faulkey Gully hike and bike trail running between trees near Lakewood Forest.",
+      "credit": "Exploricity",
+      "sourceUrl": "https://exploricity.blob.core.windows.net/photos/129s-1e51d94600.jpg"
+    }
   },
 
   "acts": [
     {
       "id": "neighborhood",
-      "label": "Out the front door",
+      "label": "Inside Lakewood Forest",
       "navLabel": "Neighborhood",
       "title": "The neighborhood itself",
-      "intro": "What you can reach on foot, on a bike, or in under five minutes.",
+      "intro": "The oaks, the trail and the club — everything within about two miles of the front door.",
       "color": "#5f7050"
     },
     {
@@ -78,5 +83,349 @@
     }
   ],
 
-  "places": []
+  "places": [
+    {
+      "id": "lakewood-residents-club",
+      "name": "Lakewood Residents' Club",
+      "act": "neighborhood",
+      "hero": true,
+      "blurb": "Members-only 50m pool, a separate wading pool, playground and lighted tennis courts.",
+      "body": "A 50-meter temperature-controlled pool with a diving board, a separate wading pool for the little ones, and lifeguards on duty whenever it is open. There is a playground with a climbing structure, sand volleyball, four lighted tennis courts and two pickleball courts, and a summer swim team that most neighborhood kids seem to end up on. It sits right beside Faulkey Gully, so the trail is a few steps from the gate.",
+      "note": "Worth knowing up front: this is a separate members-only club, not a Lakewood Forest HOA amenity. Living in the neighborhood does not grant access — households join and pay dues, currently $592 a year or $50 a month.",
+      "address": "15006 Lakewood Forest Drive, Houston, TX 77070",
+      "coords": [29.990405, -95.593052],
+      "distanceMiles": 2.2,
+      "driveMinutes": 7,
+      "season": "Courts open year-round; swim team runs in summer",
+      "cost": "Membership required — $592/year per household",
+      "url": "https://lakewoodrc.org/",
+      "image": {
+        "file": "lakewood-residents-club.jpg",
+        "alt": "The Lakewood Residents' Club swimming pool on a sunny day.",
+        "credit": "Lakewood Residents' Club",
+        "sourceUrl": "https://lakewoodrc.org/wp-content/uploads/2022/02/lakewoodrc-pooldues-165054108_4162971360414603_1861006332010654851_n.jpg"
+      }
+    },
+    {
+      "id": "faulkey-gully-trail",
+      "name": "Faulkey Gully Hike & Bike Trail",
+      "act": "neighborhood",
+      "blurb": "Flat, paved 1.9-mile creek trail — good for scooters, trikes and heron-spotting.",
+      "address": "Lakewood Forest Drive to Guernsey Drive, Cypress, TX",
+      "coords": [29.9899, -95.5931],
+      "distanceMiles": 2.2,
+      "driveMinutes": 7,
+      "season": "Year-round",
+      "cost": "Free",
+      "url": "https://www.faulkeygullymud.com/2021/hike-bike-trail/",
+      "image": {
+        "file": "faulkey-gully-trail.jpg",
+        "alt": "A paved trail running alongside the Faulkey Gully channel.",
+        "credit": "Exploricity",
+        "sourceUrl": "https://exploricity.blob.core.windows.net/photos/123s-1e51d9401c.jpg"
+      }
+    },
+    {
+      "id": "lakewood-forest",
+      "name": "Lakewood Forest itself",
+      "act": "neighborhood",
+      "blurb": "2,617 homes under big oaks, with wide lots and streets quiet enough to learn to ride on.",
+      "coords": [29.995, -95.605],
+      "driveMinutes": 0,
+      "season": "Year-round",
+      "cost": "One of the lowest HOA fees in northwest Houston",
+      "url": "https://lakewoodforestfund.com/",
+      "image": {
+        "file": "lakewood-forest.jpg",
+        "alt": "A tree-lined residential street in Lakewood Forest.",
+        "credit": "Lakewood Forest Civic Association",
+        "sourceUrl": "https://img1.wsimg.com/isteam/ip/e070ecb8-242a-465b-a2cd-5420f8af0a64/Grant%20and%20Gardenglen%202.jpg"
+      }
+    },
+    {
+      "id": "lakewood-forest-civic-association",
+      "name": "Civic Association events",
+      "act": "neighborhood",
+      "blurb": "Volunteer-run neighborhood events through the year, including the Fourth of July.",
+      "coords": [29.9955, -95.6065],
+      "driveMinutes": 0,
+      "season": "Events throughout the year",
+      "cost": "Free to attend · $15/year voluntary membership",
+      "url": "https://lakewoodforestcivicassociation.org/"
+    },
+
+    {
+      "id": "matzke-park",
+      "name": "Matzke Park",
+      "act": "nearby",
+      "hero": true,
+      "blurb": "Barrier-free Be An Angel playground with a rope spider web and a sensory garden.",
+      "body": "The Be An Angel playground here is barrier-free, so ramps and ground-level activities let children of different abilities play together, and side rails run the length of every bridge and platform — which matters a great deal when a three-year-old is running. There is a rope spider-web climber they make straight for, a rock wall paired with a slide, swings and a sway bench, all over soft wood-fiber surfacing. The wider 19-acre park adds a butterfly and sensory garden, two picnic pavilions, restrooms and a paved trail.",
+      "address": "13110 Jones Road, Houston, TX 77070",
+      "coords": [29.96612, -95.58259],
+      "distanceMiles": 3.4,
+      "driveMinutes": 9,
+      "season": "Open daily, 7am–10pm",
+      "cost": "Free",
+      "url": "https://www.pct3.com/Explore/Parks",
+      "image": {
+        "file": "matzke-park.jpg",
+        "alt": "The Be An Angel barrier-free playground at Matzke Park.",
+        "credit": "My Neighborhood News",
+        "sourceUrl": "https://cdn.myneighborhoodnews.com/uploads/images/News/Jun_2024/2021-06-15.jpg"
+      }
+    },
+    {
+      "id": "cypress-park",
+      "name": "Cypress Park",
+      "act": "nearby",
+      "blurb": "Playground and a 0.65-mile pond loop with a bridge, turtles and fish to watch.",
+      "address": "12925 North Eldridge Parkway, Cypress, TX 77429",
+      "coords": [29.9641, -95.61406],
+      "distanceMiles": 2.7,
+      "driveMinutes": 8,
+      "season": "Open daily, 7am–dusk",
+      "cost": "Free",
+      "url": "https://www.pct3.com/Explore/Parks"
+    },
+    {
+      "id": "northwest-branch-library",
+      "name": "Northwest Branch Library",
+      "act": "nearby",
+      "blurb": "The closest branch, with free ticketed story times for toddlers and preschoolers.",
+      "address": "11355 Regency Green Drive, Cypress, TX 77429",
+      "coords": [29.961771, -95.592152],
+      "distanceMiles": 4.1,
+      "driveMinutes": 12,
+      "season": "Closed Sundays",
+      "cost": "Free",
+      "url": "https://hcpl.net/locations/nw/",
+      "image": {
+        "file": "northwest-branch-library.jpg",
+        "alt": "The Northwest Branch of Harris County Public Library.",
+        "credit": "Harris County Public Library",
+        "sourceUrl": "https://hcpl.bibliocommons.com/events/uploads/images/full/4147f079ac43df6c4b09459666f166c2/Website-Locations-NW.jpg"
+      }
+    },
+    {
+      "id": "telge-park",
+      "name": "Telge Park",
+      "act": "nearby",
+      "blurb": "Fenced playground plus a 0.75-mile boardwalk loop out to Cypress Creek.",
+      "address": "12400 Pleasant Grove Road, Cypress, TX 77429",
+      "coords": [29.9544, -95.6489],
+      "distanceMiles": 4.8,
+      "driveMinutes": 12,
+      "season": "Open daily, 7am–dusk",
+      "cost": "Free",
+      "url": "https://www.pct3.com/Explore/Parks",
+      "image": {
+        "file": "telge-park.jpg",
+        "alt": "Woodland and creek scenery at Telge Park.",
+        "credit": "pinemikey via Wikimedia Commons",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Telge_Park_at_Cypress_Creek_-_Flickr_-_pinemikey.jpg"
+      }
+    },
+    {
+      "id": "kleb-woods-nature-preserve",
+      "name": "Kleb Woods Nature Preserve",
+      "act": "nearby",
+      "blurb": "Nature center, historic farmhouses and 3.9 miles of woodland trails. No dogs.",
+      "address": "20303 Draper Road, Tomball, TX 77377",
+      "coords": [30.072528, -95.739944],
+      "distanceMiles": 11.7,
+      "driveMinutes": 24,
+      "season": "Preserve daily 7am–9pm; nature center Mon–Sat",
+      "cost": "Free",
+      "url": "https://cp4.harriscountytx.gov/Explore/Parks/Precinct-4-Parks/kleb-woods-nature-preserve",
+      "image": {
+        "file": "kleb-woods.jpg",
+        "alt": "Woodland path at Kleb Woods Nature Preserve.",
+        "credit": "Harris County Precinct 4",
+        "sourceUrl": "https://cp4.harriscountytx.gov/Portals/cp4/Images/Kleb_Woods_2021_%20(37).jpg"
+      }
+    },
+
+    {
+      "id": "john-paul-landing-park",
+      "name": "John Paul Landing Park",
+      "act": "weekend",
+      "hero": true,
+      "blurb": "876 acres, a 200-acre lake, 7.8 miles of trail and three playground clusters.",
+      "body": "This is the closest thing to a proper day in nature within half an hour of the house, and it rarely feels crowded. Three separate playground clusters, a paved trail loop a five-year-old can manage on a balance bike, and a lake big enough that small children ask whether it is the sea. The Environmental Education Center a few minutes up the road is open Tuesday to Saturday and runs free family programming worth building a morning around.",
+      "address": "24202 West Road, Cypress, TX 77433",
+      "coords": [29.9115, -95.79318],
+      "distanceMiles": 17.8,
+      "driveMinutes": 32,
+      "cost": "Free",
+      "url": "https://cp4.harriscountytx.gov/Explore/Parks/Precinct-4-Parks/john-paul-landing-parks",
+      "image": {
+        "file": "john-paul-landing.jpg",
+        "alt": "Playground structures at John Paul Landing Park.",
+        "credit": "Harris County Precinct 4",
+        "sourceUrl": "https://cp4.harriscountytx.gov/Portals/cp4/Images/JPL_playground.jpg"
+      }
+    },
+    {
+      "id": "childrens-museum-houston",
+      "name": "Children's Museum Houston",
+      "act": "weekend",
+      "blurb": "Everything is meant to be touched, climbed, poured or built. Open late Thursdays.",
+      "address": "1500 Binz Street, Houston, TX 77004",
+      "coords": [29.72251, -95.38525],
+      "distanceMiles": 29.6,
+      "driveMinutes": 45,
+      "cost": "$21.95 online, ages 1+",
+      "url": "https://www.cmhouston.org/",
+      "image": {
+        "file": "childrens-museum-houston.jpg",
+        "alt": "The exterior of Children's Museum Houston.",
+        "credit": "Wikimedia Commons",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/HoustonChildrenMuseum.JPG"
+      }
+    },
+    {
+      "id": "houston-zoo",
+      "name": "Houston Zoo",
+      "act": "weekend",
+      "blurb": "Inside Hermann Park, so a visit stretches into a train ride and a playground.",
+      "address": "6200 Hermann Park Drive, Houston, TX 77030",
+      "coords": [29.71337, -95.3919],
+      "distanceMiles": 30.3,
+      "driveMinutes": 45,
+      "cost": "Flex pricing from $7.13 · booking required",
+      "url": "https://www.houstonzoo.org/",
+      "image": {
+        "file": "houston-zoo.jpg",
+        "alt": "The main entrance to the Houston Zoo.",
+        "credit": "Wikimedia Commons",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Houston_Zoo_Main_Entrance.jpg"
+      }
+    },
+    {
+      "id": "space-center-houston",
+      "name": "Space Center Houston",
+      "act": "weekend",
+      "blurb": "A restored Saturn V on its side, and a tram onto the working NASA campus.",
+      "address": "1601 E NASA Parkway, Houston, TX 77058",
+      "coords": [29.55113, -95.09733],
+      "distanceMiles": 50,
+      "driveMinutes": 62,
+      "cost": "From $24.95 children · $29.95 adults · $10 parking",
+      "url": "https://spacecenter.org/",
+      "image": {
+        "file": "space-center-houston.jpg",
+        "alt": "A shuttle mounted atop its carrier aircraft at Space Center Houston.",
+        "credit": "Wikimedia Commons",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Space_Center_Houston_Shuttle_atop_Carrler.jpg"
+      }
+    },
+    {
+      "id": "kemah-boardwalk",
+      "name": "Kemah Boardwalk",
+      "act": "weekend",
+      "blurb": "Free to walk, with pay-as-you-go rides — useful with a cautious three-year-old.",
+      "address": "215 Kipp Avenue, Kemah, TX 77565",
+      "coords": [29.54711, -95.01896],
+      "distanceMiles": 56,
+      "driveMinutes": 70,
+      "cost": "Free to enter · all-day ride pass from $23.99",
+      "url": "https://www.kemahboardwalk.com/",
+      "image": {
+        "file": "kemah-boardwalk.jpg",
+        "alt": "The Kemah Boardwalk on Galveston Bay.",
+        "credit": "Wikimedia Commons",
+        "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/KemahBoardwalk--KemahTexas--24DEC2021.jpg"
+      }
+    },
+
+    {
+      "id": "hamilton-elementary-school",
+      "name": "Hamilton Elementary School",
+      "act": "schools",
+      "blurb": "992 students, and the strongest elementary marks in the Cy-Fair feeder pattern.",
+      "address": "12050 Old Kluge Road, Cypress, TX 77429",
+      "coords": [29.98574, -95.61492],
+      "distanceMiles": 1.5,
+      "driveMinutes": 5,
+      "rating": "TEA 2024–25: A (93/100)",
+      "grades": "EE–5",
+      "url": "https://hamiltones.cfisd.net/"
+    },
+    {
+      "id": "hamilton-middle-school",
+      "name": "Hamilton Middle School",
+      "act": "schools",
+      "blurb": "1,472 students. Every Hamilton Elementary address moves up to this campus.",
+      "address": "12330 Kluge Road, Cypress, TX 77429",
+      "coords": [29.9884, -95.6182],
+      "distanceMiles": 1.4,
+      "driveMinutes": 4,
+      "rating": "TEA 2024–25: A (91/100)",
+      "grades": "6–8",
+      "url": "https://hamiltonms.cfisd.net/"
+    },
+    {
+      "id": "cypress-creek-high-school",
+      "name": "Cypress Creek High School",
+      "act": "schools",
+      "blurb": "3,217 students. The Lakewood Forest side routes here rather than to Cy-Fair High.",
+      "address": "9815 Grant Road, Houston, TX 77070",
+      "coords": [29.96551, -95.56544],
+      "distanceMiles": 4.5,
+      "driveMinutes": 10,
+      "rating": "TEA 2024–25: B (84/100)",
+      "grades": "9–12",
+      "url": "https://cycreek.cfisd.net/"
+    },
+
+    {
+      "id": "kroger-louetta",
+      "name": "Kroger, Grant & Louetta",
+      "act": "practical",
+      "blurb": "Full-size store with a pharmacy and fuel center, essentially around the corner.",
+      "address": "13135 Louetta Road, Cypress, TX 77429",
+      "coords": [29.99405, -95.6216],
+      "distanceMiles": 0.4,
+      "driveMinutes": 2
+    },
+    {
+      "id": "heb-grant-spring-cypress",
+      "name": "H-E-B, Grant & Spring Cypress",
+      "act": "practical",
+      "blurb": "The nearest H-E-B, open 6am–11pm daily with a pharmacy and fuel.",
+      "address": "14100 Spring Cypress Road, Cypress, TX 77429",
+      "coords": [30.00299, -95.63902],
+      "distanceMiles": 1.6,
+      "driveMinutes": 5,
+      "url": "https://www.heb.com/heb-store/US/tx/cypress/grant-and-spring-cypress-h-e-b-698"
+    },
+    {
+      "id": "texas-childrens-pediatrics-lakewood",
+      "name": "Texas Children's Pediatrics Lakewood",
+      "act": "practical",
+      "blurb": "Pediatric practice half a mile away on Grant Road, weekdays 8am–5pm.",
+      "address": "13215 Grant Road, Suite 100, Cypress, TX 77429",
+      "coords": [29.9961, -95.6246],
+      "distanceMiles": 0.5,
+      "driveMinutes": 2,
+      "url": "https://www.texaschildrens.org/locations/texas-childrens-pediatrics/lakewood"
+    },
+    {
+      "id": "commute-downtown-houston",
+      "name": "Downtown Houston",
+      "act": "practical",
+      "blurb": "About 25 miles via SH 249 or US 290 — closer to an hour in morning traffic.",
+      "distanceMiles": 25,
+      "driveMinutes": 60
+    },
+    {
+      "id": "commute-energy-corridor",
+      "name": "The Energy Corridor",
+      "act": "practical",
+      "blurb": "About 17 miles south down Eldridge Parkway, 35 to 45 minutes at rush hour.",
+      "distanceMiles": 17,
+      "driveMinutes": 40
+    }
+  ]
 }
