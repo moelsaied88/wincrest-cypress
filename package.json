@@ -1,0 +1,14 @@
+{
+  "name": "wincrest-cypress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Area guide to the family amenities around Lakewood Forest, Cypress, Texas.",
+  "scripts": {
+    "fonts": "node scripts/fetch-fonts.js",
+    "images": "node scripts/fetch-images.js && bash scripts/optimize-images.sh",
+    "build": "node build.js",
+    "verify": "node scripts/verify.js",
+    "serve": "cd docs && python3 -m http.server 4173"
+  },
+  "license": "UNLICENSED"
+}

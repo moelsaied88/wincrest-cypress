@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FAF6EF">
+<link rel="stylesheet" href="assets/styles/site.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <span class="topbar__mark">Lakewood Forest</span>
+    <nav class="topbar__nav" aria-label="Sections">{{NAV_RAW}}</nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="opening">
+    <div class="opening__text">
+      <p class="kicker">{{KICKER}}</p>
+      <h1 class="opening__title">{{HEADLINE}}</h1>
+      <p class="opening__standfirst">{{STANDFIRST}}</p>
+    </div>
+    <figure class="opening__figure">
+      {{HERO_IMAGE_RAW}}
+    </figure>
+  </section>
+
+  {{SECTIONS_RAW}}
+
+  <section class="mapsec" id="map">
+    <div class="section__head">
+      <p class="kicker">Everything, mapped</p>
+      <h2 class="section__title">How far is any of it, really</h2>
+      <p class="section__intro">{{MAP_INTRO}}</p>
+    </div>
+    <div class="mapsec__frame">
+      <div id="leaflet" role="application" aria-label="Map of area amenities"></div>
+      <p class="mapsec__legend" id="map-legend"></p>
+    </div>
+    <noscript><p class="section__intro">The map needs JavaScript. Every place above lists its own drive time.</p></noscript>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__address">{{ADDRESS}}</p>
+    <p class="footer__note">{{FOOTER_NOTE}}</p>
+    <details class="credits">
+      <summary>Photo credits &amp; sources</summary>
+      {{CREDITS_RAW}}
+    </details>
+    <p class="footer__updated">Last updated {{UPDATED}}</p>
+  </div>
+</footer>
+
+<script id="mapdata" type="application/json">{{MAPDATA_RAW}}</script>
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/scripts/map.js" defer></script>
+</body>
+</html>

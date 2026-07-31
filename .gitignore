@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+
+# Downloaded source photography. Reproducible via `npm run images`; the
+# optimized derivatives in docs/assets/images are what actually ship.
+src/originals/

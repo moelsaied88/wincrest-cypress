@@ -77,8 +77,9 @@ function imageTag(p, variant, sizes) {
   return `<img src="${esc(src)}" alt="${esc(p.image.alt || p.name)}" ${dims} loading="lazy" decoding="async" sizes="${esc(sizes)}">`;
 }
 
-function buildHero(p) {
+function buildHero(p, flip) {
   return render(tpl('hero'), {
+    FLIP: flip ? ' hero--flip' : '',
     ID: p.id,
     NAME: p.name,
     BODY: p.body || p.blurb || '',
@@ -106,7 +107,7 @@ function buildIndexItem(p) {
   });
 }
 
-function buildPhotoAct(act, places) {
+function buildPhotoAct(act, places, flip) {
   const hero = places.find((p) => p.hero);
   const rest = places.filter((p) => !p.hero);
   return render(tpl('act'), {
@@ -114,7 +115,7 @@ function buildPhotoAct(act, places) {
     LABEL: act.label,
     TITLE: act.title,
     INTRO: act.intro || '',
-    HERO_RAW: buildHero(hero),
+    HERO_RAW: buildHero(hero, flip),
     ITEMS_RAW: rest.map(buildIndexItem).join('\n'),
     COUNT: rest.length ? `${rest.length} more nearby` : '',
   });
@@ -166,18 +167,25 @@ function buildPractical(act, places) {
   });
 }
 
-function buildCredits(places) {
-  const items = places
-    .filter((p) => p.image && p.image.credit)
-    .map(
-      (p) =>
-        `<li>${esc(p.name)} — ${
-          p.image.sourceUrl
-            ? `<a href="${esc(p.image.sourceUrl)}" target="_blank" rel="noopener">${esc(p.image.credit)}</a>`
-            : esc(p.image.credit)
-        }</li>`
-    );
+function creditLine(label, image) {
+  if (!image || !image.credit) return '';
+  const credit = image.sourceUrl
+    ? `<a href="${esc(image.sourceUrl)}" target="_blank" rel="noopener">${esc(image.credit)}</a>`
+    : esc(image.credit);
+  return `<li>${esc(label)} — ${credit}</li>`;
+}
+
+function buildCredits(data) {
+  const items = [creditLine('Opening photograph', data.site.heroImage)]
+    .concat(data.places.map((p) => creditLine(p.name, p.image)))
+    .filter(Boolean);
   return items.length ? `<ul class="credits__list">${items.join('')}</ul>` : '';
+}
+
+function siteHeroImage(site) {
+  if (!site.heroImage || !site.heroImage.file) return '';
+  const base = site.heroImage.file.replace(/\.[^.]+$/, '');
+  return `<img src="assets/images/${esc(base)}-hero.jpg" alt="${esc(site.heroImage.alt || '')}" width="1600" height="1000" fetchpriority="high" decoding="async">`;
 }
 
 function mapPayload(data) {
@@ -213,13 +221,14 @@ function main() {
 
   const byAct = (id) => data.places.filter((p) => p.act === id);
 
+  let photoActIndex = 0;
   const sections = data.acts
     .map((act) => {
       const places = byAct(act.id);
       if (!places.length) return '';
       if (act.id === 'schools') return buildSchools(act, places);
       if (act.id === 'practical') return buildPractical(act, places);
-      return buildPhotoAct(act, places);
+      return buildPhotoAct(act, places, photoActIndex++ % 2 === 1);
     })
     .filter(Boolean)
     .join('\n');
@@ -236,10 +245,11 @@ function main() {
     STANDFIRST: data.site.standfirst,
     KICKER: data.site.kicker,
     NAV_RAW: nav,
+    HERO_IMAGE_RAW: siteHeroImage(data.site),
     SECTIONS_RAW: sections,
     MAP_INTRO: data.site.mapIntro,
     ADDRESS: data.site.address,
-    CREDITS_RAW: buildCredits(data.places),
+    CREDITS_RAW: buildCredits(data),
     FOOTER_NOTE: data.site.footerNote,
     UPDATED: data.site.updated,
     MAPDATA_RAW: JSON.stringify(mapPayload(data)),

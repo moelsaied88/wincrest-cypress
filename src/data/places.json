@@ -1,0 +1,82 @@
+{
+  "site": {
+    "title": "Lakewood Forest, Cypress — an area guide for families",
+    "description": "What life looks like for a family with young kids in Lakewood Forest, Cypress, Texas: the pool, the trails, the splash pads, the schools, and everything within a short drive.",
+    "kicker": "Cypress, Texas",
+    "headline": "A neighborhood built for small explorers",
+    "standfirst": "Lakewood Forest is 2,617 homes under a canopy of oaks in northwest Harris County. This is a guide to what surrounds it — written for a family with children between three and ten, and honest about the drive times.",
+    "address": "12903 Wincrest Ct, Cypress, Texas 77429",
+    "mapIntro": "Every place on this page, pinned and colour-coded by section. The dark pin is the house.",
+    "footerNote": "Distances and drive times are measured from the house and assume normal traffic. Prices, hours, and splash pad seasons change — the links go to each place's own site, which is always more current than this page.",
+    "updated": "July 2026",
+    "home": {
+      "coords": [29.9983, -95.6297],
+      "label": "12903 Wincrest Ct",
+      "note": "Lakewood Forest, Section 10"
+    },
+    "heroImage": null
+  },
+
+  "acts": [
+    {
+      "id": "neighborhood",
+      "label": "Out the front door",
+      "navLabel": "Neighborhood",
+      "title": "The neighborhood itself",
+      "intro": "What you can reach on foot, on a bike, or in under five minutes.",
+      "color": "#5f7050"
+    },
+    {
+      "id": "nearby",
+      "label": "Ten minutes away",
+      "navLabel": "Nearby",
+      "title": "Where the weekday afternoons go",
+      "intro": "Parks, playgrounds and the library — close enough for after school, and close enough to leave early when someone melts down.",
+      "color": "#9a7433"
+    },
+    {
+      "id": "water",
+      "label": "When it hits 98 degrees",
+      "navLabel": "Water",
+      "title": "Water, and where to find it",
+      "intro": "Houston summers make this the section that matters. These are all public — no resident key fob required.",
+      "color": "#3d6d8a"
+    },
+    {
+      "id": "indoor",
+      "label": "Rain, and the worst of August",
+      "navLabel": "Indoors",
+      "title": "Somewhere to go when outside is not an option",
+      "intro": "Indoor play for the afternoons when the heat index wins.",
+      "color": "#96566a"
+    },
+    {
+      "id": "weekend",
+      "label": "Worth the drive",
+      "navLabel": "Weekends",
+      "title": "Saturdays with the whole day in front of you",
+      "intro": "The bigger trips, with honest drive times rather than optimistic ones.",
+      "color": "#6a5a8a"
+    },
+    {
+      "id": "schools",
+      "label": "Schools",
+      "navLabel": "Schools",
+      "title": "The Cy-Fair feeder chain",
+      "intro": "This address is zoned to Cypress-Fairbanks ISD. Every Hamilton Elementary address moves up to Hamilton Middle; the Lakewood Forest side then routes to Cypress Creek High rather than Cy-Fair High.",
+      "footnote": "Ratings are from the Texas Education Agency's 2024–25 accountability release and are re-issued annually. Verify any specific address with CFISD before relying on the zoning.",
+      "color": "#5f7050"
+    },
+    {
+      "id": "practical",
+      "label": "The practical stuff",
+      "navLabel": "Practical",
+      "title": "Groceries, doctors, and the drive to work",
+      "intro": "The unglamorous things that decide whether a neighborhood actually works day to day.",
+      "footnote": "Commute times reflect weekday morning rush hour, not an empty road at 10am.",
+      "color": "#655e4f"
+    }
+  ],
+
+  "places": []
+}
